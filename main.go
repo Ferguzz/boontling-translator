@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"strings"
 )
 
 func init() {
@@ -14,7 +15,7 @@ func init() {
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	var result string
 
-	input := r.URL.Query().Get("input")
+	input := strings.ToLower(r.URL.Query().Get("input"))
 	if input != "" {
 		boont, exists := englishToBoont[input]
 		if exists {

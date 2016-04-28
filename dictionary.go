@@ -1,6 +1,10 @@
 package boontling
 
 var englishToBoont map[string]string = map[string]string{
+	"crazy": "tuddies",
+
+	"deer":  "boshe",
+	"doe":   "lengthy",
 	"drink": "horn",
 
 	"fire": "jeffer",
@@ -11,14 +15,20 @@ var englishToBoont map[string]string = map[string]string{
 
 	"lots of": "heelch",
 
-	"party":    "tidrik",
+	"party": "tidrik",
+	"phone": "telefe",
+	// "phone (verb)": "Levi",
 	"preacher": "skype",
 	"pregnant": "lizzie",
 
-	"stroll": "pike",
-	"sun":    "sol",
+	"stallion": "steedos",
+	"stroll":   "pike",
+	"sun":      "sol",
+
+	"tobacco": "tobe",
 
 	"walk":    "pike",
+	"wedding": "locking",
 	"whiskey": "skee",
 	"whore":   "Madge",
 	"wife":    "old dame",
