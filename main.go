@@ -13,19 +13,22 @@ func init() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	var result string
+	var data struct {
+		Query  string
+		Result string
+	}
 
-	input := strings.ToLower(r.URL.Query().Get("input"))
-	if input != "" {
-		boont, exists := englishToBoont[input]
+	data.Query = strings.ToLower(r.URL.Query().Get("query"))
+	if data.Query != "" {
+		boont, exists := englishToBoont[data.Query]
 		if exists {
-			result = boont
+			data.Result = boont
 		} else {
-			result = "No translation available :("
+			data.Result = "No translation available :("
 		}
 	}
 	t, _ := template.ParseFiles("index.html")
-	t.Execute(w, result)
+	t.Execute(w, data)
 }
 
 func listHandler(w http.ResponseWriter, r *http.Request) {

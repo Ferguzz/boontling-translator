@@ -12,11 +12,11 @@
 <body>
 	<h1>Simple Boontling Dictionary</h1>
 	<form>
-	  	Input: <input type="text" name="input">
+	  	Input: <input type="text" name="query" value="{{.Query}}"><input type="submit" value="Show me the Boontling!">
   	</form>
 
-  	{{if .}}
-  		Boontling: {{.}}
+  	{{if .Result}}
+  		Boontling: {{.Result}}
   	{{end}}
 </body>
 </html>
