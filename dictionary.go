@@ -1,9 +1,12 @@
 package boontling
 
-var englishToBoont map[string]string = map[string]string{
-	"babe": "bahlness",
+var nouns map[string]string = map[string]string{
+	"babe":   "bahlness",
+	"boob":   "Mollie",
+	"breast": "Mollie",
 
-	"crazy": "tuddies",
+	"coffee": "zeese",
+	"crazy":  "tuddies",
 
 	"deer":   "boshe",
 	"doe":    "lengthy",
@@ -12,7 +15,6 @@ var englishToBoont map[string]string = map[string]string{
 
 	"fire": "jeffer",
 	"food": "chigrel",
-	// "eat (verb)": "chigrel",
 
 	"good":  "bahl",
 	"great": "bahlest",
@@ -22,11 +24,11 @@ var englishToBoont map[string]string = map[string]string{
 
 	"knife": "barlow",
 
-	"lots of": "heelch",
+	"lots": "~of",
+	"~of":  "heelch",
 
-	"party": "tidrik",
-	"phone": "telefe",
-	// "phone (verb)": "Levi",
+	"party":    "tidrik",
+	"phone":    "telefe",
 	"potato":   "boo",
 	"preacher": "skype",
 	"pregnant": "lizzie",
@@ -37,10 +39,19 @@ var englishToBoont map[string]string = map[string]string{
 	"sun":      "sol",
 
 	"tobacco": "tobe",
+	"twenty":  "~five",
+	"~five":   "~cents",
+	"~cents":  "toobs",
 
 	"walk":    "pike",
 	"wedding": "locking",
 	"whiskey": "skee",
 	"whore":   "Madge",
 	"wife":    "old dame",
+}
+
+var verbs map[string]string = map[string]string{
+	"eat": "chigrel",
+
+	"phone": "Levi",
 }
